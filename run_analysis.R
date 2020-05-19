@@ -1,0 +1,26 @@
+subject_test<-read.table("UCI HAR Dataset/test/subject_test.txt")
+x_test<-read.table("UCI HAR Dataset/test/X_test.txt")
+y_test<-read.table("UCI HAR Dataset/test/y_test.txt")
+subject_train<-read.table("UCI HAR Dataset/train/subject_train.txt")
+x_train<-read.table("UCI HAR Dataset/train/X_train.txt")
+y_train<-read.table("UCI HAR Dataset/train/y_train.txt")
+feature<-read.table("UCI HAR Dataset/features.txt")
+x<-rbind(x_test,x_train)
+y<-rbind(y_test,y_train)
+subject<-rbind(subject_test,subject_train)
+names(subject)<-"subjectID"
+names(y)<-"activity"
+names(x)<-feature$V2
+merged<-cbind(subject,y,x)
+merged$activity<-as.character(merged$activity)
+merged$activity<-sub("1","WALKING",merged$activity)
+merged$activity<-sub("2","WALKING_UPSTAIRS",merged$activity)
+merged$activity<-sub("3","WALKING_DOWNSTAIRS",merged$activity)
+merged$activity<-sub("4","SITTING",merged$activity)
+merged$activity<-sub("5","STANDING",merged$activity)
+merged$activity<-sub("6","LAYING",merged$activity)
+merged_mean_sd<-merged[,c(1,2,grep("mean",names(merged)),grep("std",names(merged)))]
+write.table(merged_mean_sd,"merged_mean_sd.txt",row.names = FALSE)
+library(dplyr)
+ave_merged_mean_sd<-merged_mean_sd %>% group_by(subjectID,activity) %>% summarize_all(funs(mean),na.rm=TRUE)
+write.table(ave_merged_mean_sd,"ave_merged_mean_sd.txt",row.names = FALSE)
