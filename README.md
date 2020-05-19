@@ -1,4 +1,4 @@
-# Explanation of analysis performing script ('analysis_performing_script.R')
+# Explanation of analysis performing script ('run_analysis.R')
 
 Line 1 ~ 7: read in dataframe from 'subject_test.txt','X_test.txt','y_test.txt','subject_train.txt','X_train.txt','y_train.txt', 'features.txt';
 
