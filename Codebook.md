@@ -1,6 +1,6 @@
- Raw data were collected from the accelerometers from the Samsung Galaxy S smartphone (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) and processed into two tidy datasets: 'merged_mean_sd.csv','ave_merged_mean_sd.csv'
+ Raw data were collected from the accelerometers from the Samsung Galaxy S smartphone (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) and processed into two tidy datasets: 'merged_mean_sd.txt','ave_merged_mean_sd.txt'
 
-#'merged_mean_sd.csv' merged the training and the test sets in the Raw data file ,extracts only the measurements on the mean and standard deviation for each measurement, uses descriptive activity names to name the activities in the data set, and appropriately labels the data set with descriptive variable names. The tidy data set contains 10299 observations and 81 varibles including 
+#'merged_mean_sd.txt' merged the training and the test sets in the Raw data file ,extracts only the measurements on the mean and standard deviation for each measurement, uses descriptive activity names to name the activities in the data set, and appropriately labels the data set with descriptive variable names. The tidy data set contains 10299 observations and 81 varibles including 
  [1] "subjectID"                       "activity"                       
  [3] "tBodyAcc-mean()-X"               "tBodyAcc-mean()-Y"              
  [5] "tBodyAcc-mean()-Z"               "tGravityAcc-mean()-X"           
@@ -43,4 +43,4 @@
 [79] "fBodyBodyAccJerkMag-std()"       "fBodyBodyGyroMag-std()"         
 [81] "fBodyBodyGyroJerkMag-std()"
 
-#'ave_merged_mean_sd.csv' was created by averaging each variable for each activity and each subject in 'merged_mean_sd.csv'. The tidy data set contains 180 observations and 81 the same variables as 'merged_mean_sd.csv'
+#'ave_merged_mean_sd.txt' was created by averaging each variable for each activity and each subject in 'merged_mean_sd.txt'. The tidy data set contains 180 observations and 81 the same variables as 'merged_mean_sd.txt'
