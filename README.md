@@ -14,12 +14,12 @@ Line 15 ~ 21: use descriptive activity names to name the activities in the data 
 
 Line 22: extracts only the measurements on the mean and standard deviation for each measurement;
 
-Line 23: export the tidy data set as 'merged_mean_sd.csv';
+Line 23: export the tidy data set as 'merged_mean_sd.txt';
 
 Line 24: load dplyr package;
 
 Line 25: create second tidy data set by averaging each variable for each activity and each subject in the first tidy data set;
 
-Line 26: export the second tidy data set as 'ave_merged_mean_sd.csv'
+Line 26: export the second tidy data set as 'ave_merged_mean_sd.txt'
 
 
